@@ -1,0 +1,166 @@
+/* Chatbot CSS */
+#chatButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2055e4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100000001!important;
+}
+
+#chatContainer {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 100000000!important;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#chatContainer.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#chatBox {
+    background: white;
+    padding: 0 15px 10px;
+    overflow-y: auto;
+}
+
+#chatInput {
+    resize: none;
+    display: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #d8d8d8;
+}
+
+#chatContainer.open #chatInput {
+	display: block!important;
+}
+
+#chatHeader {
+    display: flex;
+    align-items: center;
+    background-color: #2055e4;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+#siteName {
+    font-weight: bold;
+}
+
+#siteSlogan {
+    font-size: 12px;
+    font-style: italic;
+}
+
+#siteIcon {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1024px-Default_pfp.svg.png'); /* Favicon */
+    background-size: cover;
+    border: solid 2px #000;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#closeChatBox {
+    cursor: pointer;
+}
+
+.chatbotMessage {
+    display: block;
+    margin: 10px 0;
+    background-color: #4285F4;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.chatbotMessage > a {
+    color: #e4ff00!important;
+    font-weight: bold;
+}
+
+.userMessage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px 0 10px auto;
+    background-color: #34A853;
+    color: #FFFFFF;
+    border-radius: 10px;
+    text-align: right;
+    width: fit-content;
+}
+
+.options {
+    background-color: #ECEFF1;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.chatbotMessage, .userMessage, .options {
+    animation: fadeIn 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    max-width: 80%;
+    padding: 5px 10px;
+}
+
+#closeButton {
+    cursor: pointer;
+}
+
+.chatbotMessage .profilePic, .userMessage .profilePic {
+     width: 40px;
+     height: 40px;
+     background-size: cover;
+     border-radius: 50%;
+     margin-right: 10px;
+ }
+
+.chatbotMessage .profilePic {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1024px-Default_pfp.svg.png'); /* Add system message's profile picture */
+}
+
+.userMessage .profilePic {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1024px-Default_pfp.svg.png'); /* Add user message's profile picture */
+}
+
+@media (max-width: 480px) {
+    #chatContainer {
+        width: 100%!important;
+        max-height: 100vh;
+        bottom: 0!important;
+        left: 0!important;
+        max-height: none;
+        z-index: 99999999!important;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
