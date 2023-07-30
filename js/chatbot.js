@@ -185,7 +185,7 @@ function getResponse(userMessage, errorMessage) {
 // Will be added soon
 /*function saveMessage(userMessage, botResponse) {
     let xhr = new XMLHttpRequest();
-    let url = "/saveMessages.php";
+    let url = "/app/saveChatLog.php";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
