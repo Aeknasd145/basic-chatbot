@@ -1,5 +1,5 @@
 # Basic Chatbot
-Basic chatbot with options, created with the help of Chat GPT-4
+Basic chatbot, created with the help of Chat GPT-4
 
 
 # Features
