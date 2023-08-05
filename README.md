@@ -3,6 +3,7 @@ Basic chatbot, created with the help of Chat GPT-4
 
 # How To Install
 - Just download the whole file and upload to your server and don't forget to change db connect file path from /app/saveChatLog.php
+- Set profile pictures for site and user icon from /css/chatbot.css
 
 # Features
 - Add default questions and aswers
