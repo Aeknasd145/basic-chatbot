@@ -1,4 +1,14 @@
-/* Chatbot CSS */
+/* 
+Theme Name: Chatbot
+Author:	Abbas Eren Kılıç
+
+Chatbot CSS
+*/
+:root {
+  --site-icon: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1024px-Default_pfp.svg.png'); /* Add system message's profile picture */
+  --user-icon: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1024px-Default_pfp.svg.png'); /* Add user message's profile picture */
+}
+
 #chatButton {
     position: fixed;
     bottom: 20px;
@@ -75,7 +85,7 @@
 #siteIcon {
     width: 40px;
     height: 40px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1024px-Default_pfp.svg.png'); /* Favicon */
+    background-image: var(--site-icon);
     background-size: cover;
     border: solid 2px #000;
     border-radius: 50%;
@@ -138,11 +148,11 @@
  }
 
 .chatbotMessage .profilePic {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1024px-Default_pfp.svg.png'); /* Add system message's profile picture */
+    background-image: var(--site-icon);
 }
 
 .userMessage .profilePic {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1024px-Default_pfp.svg.png'); /* Add user message's profile picture */
+    background-image: var(--user-icon);
 }
 
 @media (max-width: 480px) {
