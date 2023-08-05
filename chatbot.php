@@ -1,8 +1,9 @@
 <?php 
   $siteName = 'Web Site Name';
   $siteSlogan = 'Web Site Slogan';
+  $contactEmail = 'info@site.com';
   $placeHolder = 'Question...';
-  $errorMessage = 'Sorry, I couldn\'t understand your message, you can contact with us via <a href="mailto:info@site.com">info@site.com</a>';
+  $errorMessage = 'Sorry, I couldn\'t understand your message, you can contact with us via <a href="'.$contactEmail.'">'.$contactEmail.'</a>';
 ?>
 <div id="chatButton">?</div>
 <div id="chatContainer" class="chatContainer mh-100">
