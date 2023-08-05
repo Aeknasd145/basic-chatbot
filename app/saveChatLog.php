@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         setcookie("chatBot", $cookieId, time() + (60 * 60 * 24 * 30), "/"); // Set cookie for a month
     }
 
-    if (!empty($cookie_id)) {
+    if (!empty($cookieId)) {
         $sql = "INSERT INTO db_name (cookie_id, user_message, system_answer) VALUES (?, ?, ?)";
         
         if ($stmt = $conn->prepare($sql)) {
